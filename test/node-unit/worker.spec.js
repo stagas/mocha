@@ -76,12 +76,36 @@ describe('worker', function() {
     });
 
     describe('function', function() {
-      describe('run', function() {
+      describe('run()', function() {
         describe('when called without arguments', function() {
           it('should reject', async function() {
             return expect(worker.run, 'to be rejected with error satisfying', {
               code: 'ERR_MOCHA_INVALID_ARG_TYPE'
             });
+          });
+        });
+
+        describe('when passed a non-string `options` value', function() {
+          it('should reject', async function() {
+            return expect(
+              () => worker.run('foo.js', 42),
+              'to be rejected with error satisfying',
+              {
+                code: 'ERR_MOCHA_INVALID_ARG_TYPE'
+              }
+            );
+          });
+        });
+
+        describe('when passed an invalid string `options` value', function() {
+          it('should reject', async function() {
+            return expect(
+              () => worker.run('foo.js', 'tomfoolery'),
+              'to be rejected with error satisfying',
+              {
+                code: 'ERR_MOCHA_INVALID_ARG_VALUE'
+              }
+            );
           });
         });
 

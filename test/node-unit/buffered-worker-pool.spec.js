@@ -30,7 +30,8 @@ describe('class BufferedWorkerPool', function() {
       require.resolve('../../lib/nodejs/buffered-worker-pool'),
       {
         workerpool: {
-          pool: sandbox.stub().returns(pool)
+          pool: sandbox.stub().returns(pool),
+          cpus: 8
         },
         '../../lib/nodejs/serializer': serializer,
         'serialize-javascript': serializeJavascript
