@@ -40,8 +40,8 @@ module.exports = config => {
           .ignore('./lib/nodejs/serializer.js')
           .ignore('./lib/nodejs/worker.js')
           .ignore('./lib/nodejs/buffered-worker-pool.js')
-          .ignore('./lib/nodejs/buffered-runner.js')
-          .ignore('./lib/nodejs/reporters/buffered.js')
+          .ignore('./lib/nodejs/parallel-buffered-runner.js')
+          .ignore('./lib/nodejs/reporters/parallel-buffered.js')
           .on('bundled', (err, content) => {
             if (err) {
               throw err;

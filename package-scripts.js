@@ -44,8 +44,8 @@ module.exports = {
       --ignore './lib/cli/*.js' \
       --ignore './lib/esm-utils.js' \
       --ignore './lib/nodejs/serializer.js' \
-      --ignore './lib/nodejs/buffered-runner.js' \
-      --ignore './lib/nodejs/reporters/buffered.js' \
+      --ignore './lib/nodejs/parallel-buffered-runner.js' \
+      --ignore './lib/nodejs/reporters/parallel-buffered.js' \
       --ignore './lib/nodejs/worker.js' \
       --ignore './lib/nodejs/buffered-worker-pool.js' \
       -o mocha.js`,

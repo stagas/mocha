@@ -9,7 +9,7 @@ const {
 } = require('../../lib/runner').constants;
 const rewiremock = require('rewiremock/node');
 const BUFFERED_RUNNER_PATH = require.resolve(
-  '../../lib/nodejs/buffered-runner.js'
+  '../../lib/nodejs/parallel-buffered-runner.js'
 );
 const Suite = require('../../lib/suite');
 const Runner = require('../../lib/runner');

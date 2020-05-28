@@ -57,7 +57,7 @@ describe('Mocha', function() {
     Mocha = rewiremock.proxy(MODULE_PATH, r => ({
       '../../lib/utils.js': r.with(stubs.utils).callThrough(),
       '../../lib/suite.js': stubs.Suite,
-      '../../lib/nodejs/buffered-runner.js': stubs.BufferedRunner,
+      '../../lib/nodejs/parallel-buffered-runner.js': stubs.BufferedRunner,
       '../../lib/runner.js': stubs.Runner
     }));
     delete require.cache[DUMB_FIXTURE_PATH];

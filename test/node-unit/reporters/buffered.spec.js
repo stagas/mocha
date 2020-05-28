@@ -31,7 +31,7 @@ describe('Buffered', function() {
     sandbox = createSandbox();
     runner = new EventEmitter();
     Buffered = rewiremock.proxy(
-      require.resolve('../../../lib/nodejs/reporters/buffered'),
+      require.resolve('../../../lib/nodejs/reporters/parallel-buffered'),
       {
         '../../../lib/nodejs/serializer': {
           SerializableEvent: {
